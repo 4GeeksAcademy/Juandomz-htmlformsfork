@@ -6,32 +6,37 @@
     <title>Page Title</title>
 </head>
 <body>
-    <div>
-        <div> <p>Payment form example</p>       </div>
+    <div class="container ">
+        <div> <h2>Payment form example</h2>       </div>
         <div>
             <div class="coral"> <p>Some fields are missing</p>        </div>
-            <form>
-                <div class="d-flex col-12 col-sm-6 col-md-4">     
-                <p>Card#<input class="col-6" type="text" name="Card" /> </p>
-                <p>CVC# <input class="col-3" type="text" name="CVC" /> </p>
-                <p>Amount €<input class="col-4" type="text" name="Amount" /></p>
+            <form class="row">
+                <div class="d-flex w-100">     
+                <div class="col-4"><p>Card#<input class="" type="text" name="Card" /> </p></div>
+                <div class="col-4"><p>CVC# <input class="" type="text" name="CVC" /> </p></div>
+               <div class="col-4"> <p>Amount €<input class="" type="text" name="Amount" /></p>  </div>
             </div>
         </div>
         <div class="d-flex">
-            <div>
-                <p>First Name:<input class="col-6" type="text" name="Card" /> </p>
-                <p>City:<input class="col-6" type="text" name="Card" /> </p>
-                <p>We accept:<input type="radio" name="color" value="red" /> </p>
+            <div class="container ">
+                <div class="col-4 w-100"><p>First Name:<input class="col-6" type="text" name="First-name" /> </p></div>
+                <div class="col-4 w-100"><p>City:<input class="col-6" type="text" name="City" /> </p></div>
+                <div class="col-4 w-100"><p>We accept:<input type="radio" name="color" value="" /> </p></div>
             </div>
-            <div>
-                <p>Last name:<input class="col-6" type="text" name="Card" /> </p>
+            <div class="container">
+                <div class="col-4 w-100"><p>Last name:<input class="col-6" type="text" name="Last-name" /> </p></div>
+            
                     <div class="d-flex">
-
+                        <div > <select name="color"> <option value="red">Red </option> <option value="yellow">Yellow</option> </select></div>
+                        <div class="col-4 w-100"> <input type="text" name="Name" /></div>
                     </div>
-                <p>Message:<input class="col-6" type="text" name="Card" /> </p>
+                    <div class="col-4 w-100"><p>Message:<input class="col-6" type="text" name="Message" /> <br> add any notes here</p></div>
             </div>
         </div>
-        <div class="d-flex"></div>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
     </form>
     
     </div>
