@@ -24,40 +24,38 @@
                     <p>Some fields are missing</p>
                 </div>
                 <form class="row">
-                    <div class="d-flex w-100 text-left">
-                        <div class="col-4"><p>Card#<br><input class="form-control" type="number" name="Card" /></p></div>
-                        <div class="col-4"><p>CVC#<br><input class="form-control" type="number" name="CVC" /></p></div>
-                        <div class=" mb-3 col-4">
-                            <p>Amount</p><input class="form-control" type="number" name="Amount" />
-                         
-                            
+                    <div class="d-flex gap-3  text-left">
+                        <div class="col-12 col-md-4 ms-3 "><p>Card#<br><input class="form-control" type="number" name="Card" /></p></div>
+                        <div class="col-12 col-md-4 "><p>CVC#<br><input class="form-control" type="number" name="CVC" /></p></div>
+                        <div class="col-12 col-md-3 "><p>Amount</p><input class="form-control" type="number" name="Amount" />
                         </div>
                     </div>
-                    <div class="d-flex w-100">
+                    <div class="d-flex">
                         <div class="w-50">
-                            <div class="col-12"><p>First Name:<br><input class="form-control" type="text" name="First-name" /></p></div>
-                            <div class="col-12"><p>City:<br><input class="form-control" type="text" name="City" /></p></div>
-                            <div class="col-12">
+                            <div class="col-12 col-md-6 ms-3"><p>First Name:<br><input class="form-control" type="text" name="First-name" /></p></div>
+                            <div class="col-12 col-md-6 ms-3"><p>City:<br><input class="form-control" type="text" name="City" /></p></div>
+                            <div class="col-12 col-md-6 ms-3">
                                 <p>We accept:</p>
                                 <input type="radio" name="payment" value="Visa"><i class="fa-brands fa-cc-visa"></i>
                                 <input type="radio" name="payment" value="Mastercard"><i class="fa-brands fa-cc-mastercard"></i>
                             </div>
                         </div>
                         <div class="w-50">
-                            <div class="col-12"><p>Last name:<br><input class="form-control" type="text" name="Last-name" /></p></div>
+                            <div class="col-12 col-md-6"><p>Last name:<br><input class="form-control" type="text" name="Last-name" /></p></div>
                             <div class="d-flex w-100">
-                                <div class="col-6"><label for="state">State:</label>
+                                <div class="col-12 col-md-4 me-3"><label for="state">State:</label>
                                     <select name="state" class="form-control">
                                         <option value="Catalunya">Catalunya</option>
                                         <option value="Madrid">Madrid</option>
                                         <option value="Asturias">Asturias</option>
                                     </select>
                                 </div>
-                                <div class="col-6"><label for="Post-code">Post code:</label>
+                                <div class="col-12 col-md-6"><label for="Post-code">Post code:</label>
                                     <input type="number" name="Post-code" class="form-control" />
                                 </div>
                             </div>
-                            <div class="col-12"><p>Message:<br><input class="form-control" type="text" name="Message" /><br>Add any notes here</p></div>
+                            <div class="col-12 "><p>Message:<br><textarea class="form-control w-100" name="Message" rows="4"></textarea>
+                                <br>Add any notes here</p></div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">
