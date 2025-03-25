@@ -1,71 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Page Title</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Formulario de Pago Responsive</title>
     <style>
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .payment-icons {
+        font-size: 2rem;
+        margin-right: 15px;
+      }
+      .form-section {
+        margin-bottom: 1.5rem;
+      }
     </style>
-    <script src="https://kit.fontawesome.com/3e74aebed6.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h2>Payment form example</h2>
-            </div>
-            <div>
-                <div class="alert alert-danger" role="alert">
-                    <p>Some fields are missing</p>
-                </div>
-                <form class="row">
-                    <div class=" row gap-3  text-left">
-                        <div class="col-12 col-md-4 ms-3 "><p>Card#<br><input class="form-control" type="number" name="Card" /></p></div>
-                        <div class="col-12 col-md-4 "><p>CVC#<br><input class="form-control" type="number" name="CVC" /></p></div>
-                        <div class="col-12 col-md-3 "><p>Amount<input class="form-control" type="number" name="Amount" /></p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="row w-50">
-                            <div class="col-12 col-md-6 ms-3"><p>First Name:<br><input class="form-control" type="text" name="First-name" /></p></div>
-                            <div class="col-12 col-md-6 ms-3"><p>City:<br><input class="form-control" type="text" name="City" /></p></div>
-                            <div class="col-12 col-md-6 ms-3">
-                                <p>We accept:</p>
-                                <input type="radio" name="payment" value="Visa"><i class="fa-brands fa-cc-visa"></i>
-                                <input type="radio" name="payment" value="Mastercard"><i class="fa-brands fa-cc-mastercard"></i>
-                            </div>
-                        </div>
-                        <div class="row w-50">
-                            <div class="col-12 col-md-6"><p>Last name:<br><input class="form-control" type="text" name="Last-name" /></p></div>
-                            <div class=" row w-100">
-                                <div class="col-12 col-md-4 me-3"><label for="state">State:</label>
-                                    <select name="state" class="form-control">
-                                        <option value="Catalunya">Catalunya</option>
-                                        <option value="Madrid">Madrid</option>
-                                        <option value="Asturias">Asturias</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-6"><label for="Post-code">Post code:</label>
-                                    <input type="number" name="Post-code" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-8"><p>Message:<br><textarea class="form-control w-100 " name="Message" rows="4"></textarea>
-                                <br>Add any notes here</p></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-secondary">Cancel</button>
-                        <button type="button" class="btn btn-primary">Send</button>
-                    </div>
-                </form>
-            </div>
+    <script
+      src="https://kit.fontawesome.com/3e74aebed6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="card">
+        <div class="card-header  ">
+          <h2 class="mb-0">Payment form example</h2>
         </div>
+        <div class="card-body">
+          <div class="alert alert-danger" role="alert">
+            <p class="mb-0">Some fields are missing</p>
+          </div>
+          <form>
+            <div class="form-section">
+              
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label">Card Number</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="Card"
+                    placeholder="1234 5678 9012 3456"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <label class="form-label">CVC</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="CVC"
+                    placeholder="123"
+                  />
+                </div>
+                <div class="col-6 col-md-3">
+                  <label class="form-label">Amount</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="Amount"
+                    placeholder="$0.00"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div class="">
+            <div class="form-section d-flex justify-content-between ">
+            
+              <div class="row w-50 g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label">First Name</label>
+                  <input class="form-control" type="text" name="First-name" />
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="form-label">City</label>
+                    <input class="form-control" type="text" name="City" />
+                  </div>
+                  <div class="form-section">
+                    <h5 class="mb-3">We accept</h5>
+                    <div class="d-flex align-items-center">
+                      <div class="form-check me-4">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="payment"
+                          id="visa"
+                          value="Visa"
+                          checked
+                        />
+                        <label class="form-check-label" for="visa">
+                          <i class="fa-brands fa-cc-visa payment-icons"></i>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="payment"
+                          id="mastercard"
+                          value="Mastercard"
+                        />
+                        <label class="form-check-label" for="mastercard">
+                          <i class="fa-brands fa-cc-mastercard payment-icons"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                
+              </div>
+              <div class="form-section w-50">
+             
+                <div class="row  g-3">
+                  <div class="col-12 col-md-6">
+                      <label class="form-label">Last Name</label>
+                      <input class="form-control" type="text" name="Last-name" />
+                    </div>
+                  
+                  <div class="col-12 col-md-3">
+                    <label class="form-label">State</label>
+                    <select name="state" class="form-select">
+                      <option value="Catalunya">Catalunya</option>
+                      <option value="Madrid">Madrid</option>
+                      <option value="Asturias">Asturias</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <label class="form-label">Post Code</label>
+                    <input type="number" name="Post-code" class="form-control" />
+                  </div>
+                  <div class="form-section">
+                      <label class="form-label">Message</label>
+                      <textarea
+                        class="form-control"
+                        name="Message"
+                        rows="4"
+                      ></textarea>
+                      <small class="text-muted">Add any notes here</small>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+          </div>
+            
+            <div class="d-flex justify-content-end mt-4">
+              <button type="button" class="btn btn-outline-secondary">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Send Madafaka
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
